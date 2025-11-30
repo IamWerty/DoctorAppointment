@@ -2,5 +2,5 @@
   <Project Path="DoctorAppointment.Data/DoctorAppointment.Data.csproj" />
   <Project Path="DoctorAppointment.Domain/DoctorAppointment.Domain.csproj" />
   <Project Path="DoctorAppointment.Service/DoctorAppointment.Service.csproj" />
-  <Project Path="DoctorAppointment.UI/DoctorAppointment.UI.csproj" />
+  <Project Path="DoctorAppointment.UI/DoctorAppointment.UI.csproj" Id="dce4e794-82ce-44ab-8765-4791357f0ab6" />
 </Solution>
