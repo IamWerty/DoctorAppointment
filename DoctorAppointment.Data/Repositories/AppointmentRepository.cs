@@ -6,15 +6,8 @@ namespace MyDoctorAppointment.Data.Repositories
 {
     public class AppointmentRepository : GenericRepository<Appointment>, IAppointmentRepository
     {
-        public override string Path { get; set; }
-        public override int LastId { get; set; }
-
-        public AppointmentRepository()
+        public AppointmentRepository(FileDatabaseConfig config) : base(config.Appointments)
         {
-            dynamic config = ReadFromAppSettings();
-
-            Path = config.Database.Appointments.Path;
-            LastId = config.Database.Appointments.LastId;
         }
 
         public override void ShowInfo(Appointment a)
@@ -24,16 +17,7 @@ namespace MyDoctorAppointment.Data.Repositories
             Console.WriteLine($"DoctorId: {a.Doctor.DoctorId}");
             Console.WriteLine($"PatientId: {a.Patient.PatientId}");
             Console.WriteLine($"Date: {a.CreatedAt}");
-            Console.WriteLine($"IllnessType: {a.Patient.IllnessType}");
-            Console.WriteLine();
-        }
-
-        protected override void SaveLastId()
-        {
-            dynamic config = ReadFromAppSettings();
-            config.Database.Appointments.LastId = LastId;
-
-            File.WriteAllText(Constants.AppSettingsPath, config.ToString());
+            Console.WriteLine($"IllnessType: {a.Patient.IllnessType}\n");
         }
     }
 }

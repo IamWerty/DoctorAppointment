@@ -1,0 +1,145 @@
+{
+  "LastId": 4,
+  "Items": [
+    {
+      "Patient": {
+        "IllnessType": 0,
+        "PatientId": 0,
+        "Age": 0,
+        "AdditionalInfo": null,
+        "Address": null,
+        "Name": "",
+        "Surname": "",
+        "Phone": null,
+        "Email": null,
+        "Id": 1,
+        "CreatedAt": "0001-01-01T00:00:00",
+        "UpdatedAt": "0001-01-01T00:00:00"
+      },
+      "Doctor": {
+        "DoctorType": 0,
+        "DoctorId": 0,
+        "Experience": 0,
+        "Salary": 0.0,
+        "Name": "",
+        "Surname": "",
+        "Phone": null,
+        "Email": null,
+        "Id": 2,
+        "CreatedAt": "0001-01-01T00:00:00",
+        "UpdatedAt": "0001-01-01T00:00:00"
+      },
+      "DateTimeFrom": "0001-01-01T00:00:00",
+      "DateTimeTo": "0001-01-01T00:00:00",
+      "Description": null,
+      "Id": 1,
+      "CreatedAt": "2024-01-05T10:00:00",
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "Patient": {
+        "IllnessType": 0,
+        "PatientId": 0,
+        "Age": 0,
+        "AdditionalInfo": null,
+        "Address": null,
+        "Name": "",
+        "Surname": "",
+        "Phone": null,
+        "Email": null,
+        "Id": 2,
+        "CreatedAt": "0001-01-01T00:00:00",
+        "UpdatedAt": "0001-01-01T00:00:00"
+      },
+      "Doctor": {
+        "DoctorType": 0,
+        "DoctorId": 0,
+        "Experience": 0,
+        "Salary": 0.0,
+        "Name": "",
+        "Surname": "",
+        "Phone": null,
+        "Email": null,
+        "Id": 3,
+        "CreatedAt": "0001-01-01T00:00:00",
+        "UpdatedAt": "0001-01-01T00:00:00"
+      },
+      "DateTimeFrom": "0001-01-01T00:00:00",
+      "DateTimeTo": "0001-01-01T00:00:00",
+      "Description": null,
+      "Id": 2,
+      "CreatedAt": "2024-01-06T11:15:00",
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "Patient": {
+        "IllnessType": 0,
+        "PatientId": 0,
+        "Age": 0,
+        "AdditionalInfo": null,
+        "Address": null,
+        "Name": "",
+        "Surname": "",
+        "Phone": null,
+        "Email": null,
+        "Id": 3,
+        "CreatedAt": "0001-01-01T00:00:00",
+        "UpdatedAt": "0001-01-01T00:00:00"
+      },
+      "Doctor": {
+        "DoctorType": 0,
+        "DoctorId": 0,
+        "Experience": 0,
+        "Salary": 0.0,
+        "Name": "",
+        "Surname": "",
+        "Phone": null,
+        "Email": null,
+        "Id": 4,
+        "CreatedAt": "0001-01-01T00:00:00",
+        "UpdatedAt": "0001-01-01T00:00:00"
+      },
+      "DateTimeFrom": "0001-01-01T00:00:00",
+      "DateTimeTo": "0001-01-01T00:00:00",
+      "Description": null,
+      "Id": 3,
+      "CreatedAt": "2024-01-07T15:45:00",
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "Patient": {
+        "IllnessType": 0,
+        "PatientId": 0,
+        "Age": 0,
+        "AdditionalInfo": null,
+        "Address": null,
+        "Name": "",
+        "Surname": "",
+        "Phone": null,
+        "Email": null,
+        "Id": 2,
+        "CreatedAt": "0001-01-01T00:00:00",
+        "UpdatedAt": "0001-01-01T00:00:00"
+      },
+      "Doctor": {
+        "DoctorType": 0,
+        "DoctorId": 0,
+        "Experience": 0,
+        "Salary": 0.0,
+        "Name": "",
+        "Surname": "",
+        "Phone": null,
+        "Email": null,
+        "Id": 4,
+        "CreatedAt": "0001-01-01T00:00:00",
+        "UpdatedAt": "0001-01-01T00:00:00"
+      },
+      "DateTimeFrom": "0001-01-01T00:00:00",
+      "DateTimeTo": "0001-01-01T00:00:00",
+      "Description": null,
+      "Id": 4,
+      "CreatedAt": "2025-11-30T17:53:43.5980999+02:00",
+      "UpdatedAt": "0001-01-01T00:00:00"
+    }
+  ]
+}

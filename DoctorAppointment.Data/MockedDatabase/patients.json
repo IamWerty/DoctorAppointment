@@ -1,1 +1,61 @@
-﻿
+{
+  "LastId": 4,
+  "Items": [
+    {
+      "IllnessType": 2,
+      "PatientId": 0,
+      "Age": 30,
+      "AdditionalInfo": null,
+      "Address": null,
+      "Name": "Ivan",
+      "Surname": "Ivanov",
+      "Phone": "123456789",
+      "Email": null,
+      "Id": 1,
+      "CreatedAt": "2024-01-01T12:00:00",
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "IllnessType": 1,
+      "PatientId": 0,
+      "Age": 25,
+      "AdditionalInfo": null,
+      "Address": null,
+      "Name": "Maria",
+      "Surname": "Petrova",
+      "Phone": "987654321",
+      "Email": null,
+      "Id": 2,
+      "CreatedAt": "2024-01-02T10:00:00",
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "IllnessType": 3,
+      "PatientId": 0,
+      "Age": 40,
+      "AdditionalInfo": null,
+      "Address": null,
+      "Name": "Serhii",
+      "Surname": "Bondarenko",
+      "Phone": "555123456",
+      "Email": null,
+      "Id": 3,
+      "CreatedAt": "2024-01-03T14:30:00",
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "IllnessType": 0,
+      "PatientId": 0,
+      "Age": 30,
+      "AdditionalInfo": null,
+      "Address": null,
+      "Name": "Mark",
+      "Surname": "Gniezdov",
+      "Phone": null,
+      "Email": null,
+      "Id": 4,
+      "CreatedAt": "2025-11-30T17:53:13.6152642+02:00",
+      "UpdatedAt": "0001-01-01T00:00:00"
+    }
+  ]
+}

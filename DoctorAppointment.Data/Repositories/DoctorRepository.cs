@@ -6,29 +6,19 @@ namespace MyDoctorAppointment.Data.Repositories
 {
     public class DoctorRepository : GenericRepository<Doctor>, IDoctorRepository
     {
-        public override string Path { get; set; }
-
-        public override int LastId { get; set; }
-
-        public DoctorRepository()
+        public DoctorRepository(FileDatabaseConfig config)
+            : base(config.Doctors)
         {
-            dynamic result = ReadFromAppSettings();
-
-            Path = result.Database.Doctors.Path;
-            LastId = result.Database.Doctors.LastId;
         }
 
         public override void ShowInfo(Doctor doctor)
         {
-            Console.WriteLine(); // implement view of all object fields
-        }
-
-        protected override void SaveLastId()
-        {
-            dynamic result = ReadFromAppSettings();
-            result.Database.Doctors.LastId = LastId;
-
-            File.WriteAllText(Constants.AppSettingsPath, result.ToString());
+            Console.WriteLine("---- Doctor Info ----");
+            Console.WriteLine($"ID: {doctor.Id}");
+            Console.WriteLine($"Name: {doctor.Name} {doctor.Surname}");
+            Console.WriteLine($"Experience: {doctor.Experience}");
+            Console.WriteLine($"Salary: {doctor.Salary}");
+            Console.WriteLine($"DoctorType: {doctor.DoctorType}");
         }
     }
 }

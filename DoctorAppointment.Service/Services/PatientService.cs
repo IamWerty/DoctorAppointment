@@ -1,3 +1,4 @@
+using MyDoctorAppointment.Data.Configuration;
 using MyDoctorAppointment.Data.Interfaces;
 using MyDoctorAppointment.Data.Repositories;
 using MyDoctorAppointment.Domain.Entities;
@@ -9,9 +10,9 @@ namespace MyDoctorAppointment.Service.Services
     {
         private readonly IPatientRepository _repo;
 
-        public PatientService()
+        public PatientService(FileDatabaseConfig config)
         {
-            _repo = new PatientRepository();
+            _repo = new PatientRepository(new FileDatabaseConfig());
         }
 
         public Patient Create(Patient patient) => _repo.Create(patient);
@@ -20,4 +21,5 @@ namespace MyDoctorAppointment.Service.Services
         public IEnumerable<Patient> GetAll() => _repo.GetAll();
         public Patient Update(int id, Patient p) => _repo.Update(id, p);
     }
+
 }

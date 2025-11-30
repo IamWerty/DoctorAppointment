@@ -1,74 +1,83 @@
 ﻿using MyDoctorAppointment.Data.Configuration;
 using MyDoctorAppointment.Data.Interfaces;
+using MyDoctorAppointment.Data.Models;
 using MyDoctorAppointment.Domain.Entities;
 using Newtonsoft.Json;
 
 namespace MyDoctorAppointment.Data.Repositories
 {
-    public abstract class GenericRepository<TSource> : IGenericRepository<TSource> where TSource : Auditable
+    public abstract class GenericRepository<T> where T : Auditable
     {
-        public abstract string Path { get; set; }
+        protected readonly string Path;
+        protected JsonTable<T> Table;
 
-        public abstract int LastId { get; set; }
-
-        public TSource Create(TSource source)
+        protected GenericRepository(string path)
         {
-            source.Id = ++LastId;
-            source.CreatedAt = DateTime.Now;
+            Path = path;
+            Load();
+        }
 
-            File.WriteAllText(Path, JsonConvert.SerializeObject(GetAll().Append(source), Formatting.Indented));
-            SaveLastId();
+        private void Load()
+        {
+            if (!File.Exists(Path))
+            {
+                Table = new JsonTable<T>();
+                Save();
+            }
+            else
+            {
+                Table = JsonConvert.DeserializeObject<JsonTable<T>>(File.ReadAllText(Path))
+                        ?? new JsonTable<T>();
+            }
+        }
 
-            return source;
+        protected void Save()
+        {
+            File.WriteAllText(
+                Path,
+                JsonConvert.SerializeObject(Table, Formatting.Indented));
+        }
+
+        public IEnumerable<T> GetAll() => Table.Items;
+
+        public T? GetById(int id) =>
+            Table.Items.FirstOrDefault(x => x.Id == id);
+
+        public T Create(T item)
+        {
+            item.Id = ++Table.LastId;
+            item.CreatedAt = DateTime.Now;
+
+            Table.Items.Add(item);
+            Save();
+            return item;
         }
 
         public bool Delete(int id)
         {
-            if (GetById(id) is null)
-                return false;
+            var obj = GetById(id);
+            if (obj == null) return false;
 
-            File.WriteAllText(Path, JsonConvert.SerializeObject(GetAll().Where(x => x.Id != id), Formatting.Indented));
-
+            Table.Items.Remove(obj);
+            Save();
             return true;
         }
 
-        public IEnumerable<TSource> GetAll()
+        public T Update(int id, T source)
         {
-            if (!File.Exists(Path))
-            {
-                File.WriteAllText(Path, "[]");
-            }
+            var index = Table.Items.FindIndex(x => x.Id == id);
+            if (index == -1)
+                throw new Exception($"Item {id} not found");
 
-            var json = File.ReadAllText(Path);
-
-            if (string.IsNullOrWhiteSpace(json))
-            {
-                File.WriteAllText(Path, "[]");
-                json = "[]";
-            }
-
-            return JsonConvert.DeserializeObject<List<TSource>>(json)!;
-        }
-
-        public TSource? GetById(int id)
-        {
-            return GetAll().FirstOrDefault(x => x.Id == id);
-        }
-
-        public TSource Update(int id, TSource source)
-        {
-            source.UpdatedAt = DateTime.Now;
             source.Id = id;
+            source.UpdatedAt = DateTime.Now;
 
-            File.WriteAllText(Path, JsonConvert.SerializeObject(GetAll().Select(x => x.Id == id ? source : x), Formatting.Indented));
-
+            Table.Items[index] = source;
+            Save();
             return source;
         }
 
-        public abstract void ShowInfo(TSource source);
-
-        protected abstract void SaveLastId();
-
-        protected dynamic ReadFromAppSettings() => JsonConvert.DeserializeObject<dynamic>(File.ReadAllText(Constants.AppSettingsPath))!;
+        public abstract void ShowInfo(T obj);
     }
+
 }
