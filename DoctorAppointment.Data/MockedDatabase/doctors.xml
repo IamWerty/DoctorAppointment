@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastId>5</LastId>
+  <Items>
+    <Item>
+      <Id>3</Id>
+      <CreatedAt>2024-01-04T21:15:10.6132587+02:00</CreatedAt>
+      <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+      <Name>Vasya</Name>
+      <Surname>Petrov</Surname>
+      <DoctorType>Dentist</DoctorType>
+      <DoctorId>0</DoctorId>
+      <Experience>20</Experience>
+      <Salary>0.0</Salary>
+    </Item>
+    <Item>
+      <Id>4</Id>
+      <CreatedAt>2025-11-30T16:35:47.3579142+02:00</CreatedAt>
+      <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+      <Name>Vasya</Name>
+      <Surname>Petrov</Surname>
+      <DoctorType>Dentist</DoctorType>
+      <DoctorId>0</DoctorId>
+      <Experience>20</Experience>
+      <Salary>0.0</Salary>
+    </Item>
+    <Item>
+      <Id>5</Id>
+      <CreatedAt>2025-11-30T17:29:23.3402191+02:00</CreatedAt>
+      <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+      <Name>Vasya</Name>
+      <Surname>Petrov</Surname>
+      <DoctorType>Dentist</DoctorType>
+      <DoctorId>0</DoctorId>
+      <Experience>20</Experience>
+      <Salary>0.0</Salary>
+    </Item>
+  </Items>
+</Table>

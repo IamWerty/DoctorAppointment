@@ -1,18 +1,21 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace MyDoctorAppointment.Data.Configuration
 {
     public class FileDatabaseConfig
     {
         public string Root { get; }
+
+        // JSON
         public string Doctors => Path.Combine(Root, "doctors.json");
         public string Patients => Path.Combine(Root, "patients.json");
         public string Appointments => Path.Combine(Root, "appointments.json");
+
+        // XML
+        public string DoctorsXml => Path.Combine(Root, "doctors.xml");
+        public string PatientsXml => Path.Combine(Root, "patients.xml");
+        public string AppointmentsXml => Path.Combine(Root, "appointments.xml");
 
         public FileDatabaseConfig()
         {
@@ -20,7 +23,8 @@ namespace MyDoctorAppointment.Data.Configuration
                 File.ReadAllText(Constants.AppSettingsPath));
 
             Root = cfg.Database.Root;
+
+            Directory.CreateDirectory(Root);
         }
     }
-
 }

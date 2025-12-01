@@ -1,4 +1,6 @@
-﻿namespace MyDoctorAppointment.Domain.Entities
+﻿using System.Xml.Serialization;
+
+namespace MyDoctorAppointment.Domain.Entities
 {
     public class Appointment : Auditable
     {
@@ -6,9 +8,11 @@
 
         public Doctor? Doctor { get; set; }
 
-        public DateTime DateTimeFrom { get; set; }
+        [XmlElement(IsNullable = true)]
+        public DateTime? CreatedAt { get; set; }
 
-        public DateTime DateTimeTo { get; set; }
+        [XmlElement(IsNullable = true)]
+        public DateTime? UpdatedAt { get; set; }
 
         public string? Description { get; set; }
     }

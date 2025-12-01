@@ -6,8 +6,7 @@ namespace MyDoctorAppointment.Data.Repositories
 {
     public class PatientRepository : GenericRepository<Patient>, IPatientRepository
     {
-        public PatientRepository(FileDatabaseConfig config)
-            : base(config.Patients)
+        public PatientRepository(FileDatabaseConfig config) : base(config.Patients, config.PatientsXml)
         {
         }
 
