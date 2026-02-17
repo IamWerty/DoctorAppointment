@@ -1,5 +1,5 @@
 {
-  "LastId": 4,
+  "LastId": 5,
   "Items": [
     {
       "IllnessType": 2,
@@ -56,6 +56,20 @@
       "Id": 4,
       "CreatedAt": "2025-11-30T17:53:13.6152642+02:00",
       "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "IllnessType": 0,
+      "PatientId": 0,
+      "Age": 30,
+      "AdditionalInfo": null,
+      "Address": null,
+      "Name": "gsf",
+      "Surname": "fdsfs",
+      "Phone": null,
+      "Email": null,
+      "Id": 5,
+      "CreatedAt": "2026-02-17T17:35:45.5412307+02:00",
+      "UpdatedAt": null
     }
   ]
 }

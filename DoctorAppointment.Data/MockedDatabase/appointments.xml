@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastId>4</LastId>
+  <Items>
+    <Item>
+      <Id>1</Id>
+      <CreatedAt>2024-01-05T10:00:00</CreatedAt>
+      <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+      <Patient>
+        <Id>1</Id>
+        <CreatedAt>0001-01-01T00:00:00</CreatedAt>
+        <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+        <Name />
+        <Surname />
+        <IllnessType>None</IllnessType>
+        <PatientId>0</PatientId>
+        <Age>0</Age>
+      </Patient>
+      <Doctor>
+        <Id>2</Id>
+        <CreatedAt>0001-01-01T00:00:00</CreatedAt>
+        <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+        <Name />
+        <Surname />
+        <DoctorType>None</DoctorType>
+        <DoctorId>0</DoctorId>
+        <Experience>0</Experience>
+        <Salary>0.0</Salary>
+      </Doctor>
+    </Item>
+    <Item>
+      <Id>2</Id>
+      <CreatedAt>2024-01-06T11:15:00</CreatedAt>
+      <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+      <Patient>
+        <Id>2</Id>
+        <CreatedAt>0001-01-01T00:00:00</CreatedAt>
+        <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+        <Name />
+        <Surname />
+        <IllnessType>None</IllnessType>
+        <PatientId>0</PatientId>
+        <Age>0</Age>
+      </Patient>
+      <Doctor>
+        <Id>3</Id>
+        <CreatedAt>0001-01-01T00:00:00</CreatedAt>
+        <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+        <Name />
+        <Surname />
+        <DoctorType>None</DoctorType>
+        <DoctorId>0</DoctorId>
+        <Experience>0</Experience>
+        <Salary>0.0</Salary>
+      </Doctor>
+    </Item>
+    <Item>
+      <Id>3</Id>
+      <CreatedAt>2024-01-07T15:45:00</CreatedAt>
+      <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+      <Patient>
+        <Id>3</Id>
+        <CreatedAt>0001-01-01T00:00:00</CreatedAt>
+        <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+        <Name />
+        <Surname />
+        <IllnessType>None</IllnessType>
+        <PatientId>0</PatientId>
+        <Age>0</Age>
+      </Patient>
+      <Doctor>
+        <Id>4</Id>
+        <CreatedAt>0001-01-01T00:00:00</CreatedAt>
+        <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+        <Name />
+        <Surname />
+        <DoctorType>None</DoctorType>
+        <DoctorId>0</DoctorId>
+        <Experience>0</Experience>
+        <Salary>0.0</Salary>
+      </Doctor>
+    </Item>
+    <Item>
+      <Id>4</Id>
+      <CreatedAt>2025-11-30T17:53:43.5980999+02:00</CreatedAt>
+      <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+      <Patient>
+        <Id>2</Id>
+        <CreatedAt>0001-01-01T00:00:00</CreatedAt>
+        <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+        <Name />
+        <Surname />
+        <IllnessType>None</IllnessType>
+        <PatientId>0</PatientId>
+        <Age>0</Age>
+      </Patient>
+      <Doctor>
+        <Id>4</Id>
+        <CreatedAt>0001-01-01T00:00:00</CreatedAt>
+        <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+        <Name />
+        <Surname />
+        <DoctorType>None</DoctorType>
+        <DoctorId>0</DoctorId>
+        <Experience>0</Experience>
+        <Salary>0.0</Salary>
+      </Doctor>
+    </Item>
+  </Items>
+</Table>

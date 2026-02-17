@@ -85,9 +85,16 @@ namespace MyDoctorAppointment.Data.Repositories
         protected void SaveXml()
         {
             var serializer = new XmlSerializer(typeof(XmlTable<T>));
-
             using var writer = new StreamWriter(XmlPath);
-            serializer.Serialize(writer, XmlTable);
+
+            try
+            {
+                serializer.Serialize(writer, XmlTable);
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new Exception(ex.InnerException?.Message, ex); // <- точна причина
+            }
         }
 
         public IEnumerable<T> GetAll() => JsonTable.Items;
